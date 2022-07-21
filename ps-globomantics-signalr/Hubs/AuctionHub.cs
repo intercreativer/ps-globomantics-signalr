@@ -8,6 +8,7 @@ namespace ps_globomantics_signalr.Hubs
         public async Task NotifyNewBid(AuctionNotify auction)
         {
             await Clients.All.SendAsync("ReceiveNewBid", auction);
+            //await Clients.Others.SendAsync("ReceiveNewBid", auction);
         }
     }
 }
